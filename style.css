@@ -1,0 +1,229 @@
+
+* {
+    font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-style: normal;  scroll-behavior: smooth;
+
+}
+body{
+    /* background-color: rgba(221, 139, 139, 0.94); */
+    background-color: rgba(0, 0, 0, 0.922);
+color: #fff;
+}
+nav{
+  width: 90%;
+  margin-inline: auto;
+  height: 60px;
+align-items: center;
+display: flex;
+justify-content: space-between;
+/* align-items: center;
+justify-content: flex-end;
+/* background-color: #252525; */
+margin-bottom: 2rem; 
+}
+nav .logo{
+  font-size: 27px;
+}
+.logo span{
+  color: #e60073;
+}
+ul{
+  list-style: none;
+  display: flex;
+  gap: 40px;
+}
+a{
+  text-decoration-line: none;
+  color: #fff;
+  transition: 0.4s ease-in-out;
+}
+a:hover{
+  color: #e60073;
+}
+main{
+  display: flex;
+  justify-content: space-evenly;
+align-items: center;
+height: 450px;
+/* background-color: rgb(146, 146, 146); */
+}
+main .btns{
+  display: flex;
+gap: 30px;
+margin-top: 60px;
+}
+main button{
+  background-color: transparent;
+  border: solid white 1px;
+  border-radius: 10px;
+  color: #fff;
+  width: 140px;
+  height: 40px;
+}
+main figure{
+   width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background-color: #fff;
+  position: relative;
+  animation: boxGlow 1s ease-in-out infinite alternate;
+  background-image: url("photo_2026-03-06_20-21-25.jpg");
+  background-position: center;
+  background-size: cover;
+}
+main figure img{
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  object-fit: cover;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+section {
+  width: 80%;
+  margin: auto;
+  min-height: max-content;
+  left: 50%;
+}
+section figure{
+  display: flex;
+}
+
+.sections h1{
+    position: relative;
+    text-align: center;
+  transition: 0.4 ease-in-out;
+  font-size: 30px;
+margin-block: 40px;
+}
+.sections h1::before,
+.sections h1::after{
+  content: "";
+  position: absolute;
+  bottom: 13px;
+  width:0;
+  height: 2px;
+  background: #e60073;
+  transition: 0.5s;
+}
+.sections h1::before{
+  left: 10%;
+}
+.sections h1::after{
+  right: 10%; 
+}
+.sections h1:hover::after,
+.sections h1:hover::before{
+  width: 32%;
+}
+#about figure {
+  display: flex;
+  justify-content: space-between;
+}
+#about figcaption p{
+  font-size: 17px;
+}
+p{
+    font-weight:200;
+}
+
+
+
+
+
+
+.projects-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.project-card {
+  position: relative;
+  width: 300px;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  cursor: pointer;
+      transition: 0.4s;
+}
+.project-card img {
+  width: 100%;
+  display: block;
+    position: relative; 
+}
+
+.project-text::before{
+  content: "";
+  top: 0;
+  right: 0;
+  position: absolute;
+  color: #e60073;
+width: 100%;
+height: 0;
+display: none;
+ } 
+
+.project-card:hover  {
+    transform: scale(1.05);
+}
+
+
+.skillsContainer{
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.card{
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+width: 170px;
+height: 170px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+transition: 0.4s;
+}
+.card:hover{
+    transform: scale(1.1);
+}
+
+
+
+
+
+
+.glow {
+  font-size: 20px;
+  color: #ffffff;
+   text-align: center; 
+  /* animation: textGlow 1s ease-in-out infinite alternate;  */
+}
+
+
+
+
+@-webkit-keyframes boxGlow {
+  from {
+    box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 60px #e60073;
+  }
+  
+  to {
+    box-shadow: 0 0 10px #fff, 0 0 20px #ff4da6, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 60px #ff4da6;
+  }
+}
+@-webkit-keyframes textGlow {
+  from {    
+    text-shadow: 0 0 10px #fff, 0 0 20px #ff4da6, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 60px #ff4da6;
+  }
+  
+  to {   
+     text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 60px #e60073;
+  }
+}
